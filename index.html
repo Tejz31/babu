@@ -28,7 +28,7 @@
 <h1>Hey Babu ❤️</h1><div style="font-size:12px;opacity:.6">v2</div>
 <p id="text"></p>
 <div id="buttons">
-<button id="yesBtn" class="yes">Yes ❤️</button>
+<button id="yesBtn" class="yes" onclick="sayYes()">Yes ❤️</button>
 <button class="no" onmouseover="moveNo(this)" ontouchstart="moveNo(this)">No 😠</button>
 </div>
 <img id="photo" src="photo.jpg" />
@@ -210,7 +210,7 @@ draw();
 
 document.addEventListener('DOMContentLoaded',()=>{
   const y=document.getElementById('yesBtn');
-  if(y){y.addEventListener('click',sayYes);} 
+  if(y){y.addEventListener('click',()=>{sayYes();});} 
 });
 </script>
 </body>
