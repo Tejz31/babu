@@ -29,7 +29,7 @@
 <p id="text"></p>
 <div id="buttons">
 <button class="yes" onclick="sayYes()">Yes ❤️</button>
-<button class="no" onmouseover="moveNo(this)" ontouchstart="moveNo(this)">No 😠
+<button class="no" onmouseover="moveNo(this)" ontouchstart="moveNo(this)">No 😠</button>
 </div>
 <img id="photo" src="photo.jpg" />
 </div>
@@ -64,9 +64,12 @@ function loveTyping(){
 }
 
 function moveNo(b){
-  b.style.position='absolute';
-  b.style.left=Math.random()*80+'vw';
-  b.style.top=Math.random()*80+'vh';
+  b.style.position='fixed';
+  const x=Math.random()*90;
+  const y=Math.random()*90;
+  b.style.left=x+'vw';
+  b.style.top=y+'vh';
+  b.style.transition='all 0.15s ease';
 }
 
 function heart(){
