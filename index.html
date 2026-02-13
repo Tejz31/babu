@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>For My Babu ❤️</title>
+<title>Valentine ❤️</title>
 <style>
   body{
     margin:0;height:100vh;display:flex;align-items:center;justify-content:center;
@@ -14,7 +14,7 @@
   h1{color:#ff7aa2}
   p{font-size:18px;min-height:60px}
   button{padding:12px 22px;border:none;border-radius:25px;margin:10px;font-size:16px;cursor:pointer}
-  .yes{background:#ff4b6e;color:white}
+  .yes{background:#ff4b6e;color:white;font-size:20px;padding:16px 28px;transform:scale(1.1)}
   .no{background:#ddd}
   .heart{position:absolute;color:#ff7aa2;animation:float 7s linear infinite}
   @keyframes float{from{transform:translateY(100vh);opacity:1}to{transform:translateY(-10vh);opacity:0}}
@@ -29,23 +29,22 @@
 <h1>Hey Babu ❤️</h1>
 <p id="text"></p>
 <div id="buttons">
-<button class="yes" onclick="sayYes()">Yes 💖</button>
-<button class="no" onmouseover="moveNo(this)">No 🙈</button>
+<button class="yes" onclick="sayYes()">Yes ❤️</button>
+<button class="no" onmouseover="moveNo(this)">No 😠</button>
 </div>
 <img id="photo" src="photo.jpg" />
 </div>
 <script>
 const message=`Nuvvu vachinappati nundi life konchem beautiful ayyindi...
 You are not just my husband — naa best friend, naa support system, naa home 🥹
-Mana marriage date: OUR_DATE 💍
+
 Sometimes nenu drama chestha… sometimes silent untanu…
 But every time you stay, you understand ❤️
-So today malli adugutunna… will you be my Valentine Babu?`;
-// dynamic greeting + visit counter
+So today malli adugutunna… BABU will you be my valentine ??`;
+// dynamic greeting
 const hour=new Date().getHours();
 let greetText=hour<12?"Good Morning Babu ☀️":hour<17?"Good Afternoon Babu 🌤️":"Good Evening Babu 🌙";
-let visits=localStorage.getItem('babuVisits')||0;visits++;localStorage.setItem('babuVisits',visits);
-document.getElementById('greet').innerText=greetText+" — you opened this " + visits + " times ❤️";
+document.getElementById('greet').innerText=greetText;
 
 let i=0;function type(){if(i<message.length){document.getElementById('text').innerHTML+=message.charAt(i);i++;setTimeout(type,35)}}type();
 function sayYes(){document.getElementById('buttons').style.display='none';document.getElementById('photo').style.display='block';loveTyping();startFireworks();}
