@@ -114,8 +114,16 @@ function checkAnswer(i){
   const res=document.getElementById('response');
   // correct value now uses human counting (1-4)
   if((i+1)===questions[qIndex].correct){
+    const res=document.getElementById('response');
     res.innerHTML="Aww you remember 🥹❤️";
-    setTimeout(finishLove,1500);
+    setTimeout(()=>{
+      qIndex++;
+      if(qIndex<questions.length){
+        showQuestion();
+      }else{
+        finishLove();
+      }
+    },1200);
   }else{
     res.innerHTML=`<div style='margin-top:10px'>
       <img src='wrong.png' style='width:180px;border-radius:12px;display:block;margin:10px auto'>
