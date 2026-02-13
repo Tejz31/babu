@@ -129,6 +129,15 @@ function checkAnswer(i){
       <img src='wrong.png' style='width:180px;border-radius:12px;display:block;margin:10px auto'>
       <div>Hmm wrong 😤 wait… we'll discuss later!</div>
     </div>`;
+    setTimeout(()=>{
+      qIndex++;
+      if(qIndex<questions.length){
+        showQuestion();
+      }else{
+        finishLove();
+      }
+    },1500);</div>
+    </div>`;
   }
 }
 
